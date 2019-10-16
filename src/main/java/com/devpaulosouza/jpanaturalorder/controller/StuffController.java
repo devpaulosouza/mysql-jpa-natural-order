@@ -28,7 +28,7 @@ public class StuffController {
          if (Objects.nonNull(order)) {
              Sort sort = JpaSort.unsafe(order.getDirection(), "natsort_canon(name, 'natural')");
 
-             customPageable= PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
+             customPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
          } else {
              customPageable = pageable;
          }
